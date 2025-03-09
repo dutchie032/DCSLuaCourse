@@ -1,0 +1,117 @@
+
+
+:root {
+    --coolor-link: "https://coolors.co/333951-033860-087ca7-004385-05b2dc";
+    --background: #333951;
+    --button: #395EA2;
+    --button-hover: #587DCE;
+    --text-color: #E9F2F4;
+}
+
+body {
+    background-color: var(--background);
+    color: #E9F2F4;
+} 
+
+.mainlayout {
+    width: 60%;
+}
+
+.button {
+    display: block;
+    background-color: var(--button);
+    width: auto;
+    margin: 0.5em 0;
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+    cursor: pointer;
+}
+
+.button-disabled {
+    background-color: red; /* TODO: color */
+}
+
+h1, h2,h3,h4, h5 {
+    cursor: default;
+}
+
+/*
+    CODE EDITOR
+*/
+
+/* *,
+*:before,
+*:after {
+    box-sizing: border-box;
+} */
+
+label,
+textarea,
+iframe {
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    margin-bottom: 1.5em;
+    min-height: 8em;
+}
+
+.editor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+}
+
+.editor pre,
+.editor textarea {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+pre,
+.editor textarea {
+    background-color: #f7f7f7;
+    color: #272727;
+    display: block;
+    line-height: 1.5;
+    margin: 0.5em 0;
+    overflow: auto;
+    padding: 1em;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.editor textarea {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    caret-color: #f7f7f7;
+    tab-size: 4;
+    overflow: hidden;
+    resize: none;
+    width: 100%;
+}
+
+code {
+    word-wrap: break-word;
+}
+
+pre,
+code,
+.editor textarea {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 1em;
+}
+
+pre code {
+    color: inherit;
+    font-size: 1em;
+}
+
+
+/*
+    CODE EDITOR END
+*/
