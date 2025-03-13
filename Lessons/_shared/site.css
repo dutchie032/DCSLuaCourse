@@ -1,11 +1,14 @@
 
 
 :root {
-    --coolor-link: "https://coolors.co/333951-033860-087ca7-004385-05b2dc";
+
+    /* https://coolors.co/333951-e9f2f4-395ea2-587dce-4f5773 */
     --background: #333951;
+    --background-output: #4F5773;
     --button: #395EA2;
     --button-hover: #587DCE;
     --text-color: #E9F2F4;
+    --executiontime-color: #8e98b8;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 } 
 
 .mainlayout {
-    width: 60%;
+    width: 80%;
 }
 
 .button {
@@ -22,6 +25,8 @@ body {
     background-color: var(--button);
     width: auto;
     margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 5px;
 }
 
 .button:hover {
@@ -30,11 +35,57 @@ body {
 }
 
 .button-disabled {
-    background-color: red; /* TODO: color */
+    background-color: #BABFD4; /* TODO: color */
 }
 
 h1, h2,h3,h4, h5 {
     cursor: default;
+}
+
+h4 {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.text {
+    cursor: default;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.collapsible > .label {
+    cursor: pointer;
+} 
+
+.collapsed > * {
+    display: none;
+}
+
+.collapsed > .label {
+    display: block;
+}
+
+.output {
+    background-color: var(--background-output);
+    border-radius: 8px;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    cursor: default;
+}
+
+.executiontime {
+    color: var(--executiontime-color);
+}
+
+.box {
+    display: flex;
+}
+
+.push-right {
+    margin-left: auto;
 }
 
 /*
@@ -93,6 +144,8 @@ pre,
     overflow: hidden;
     resize: none;
     width: 100%;
+
+    outline: none;
 }
 
 code {
