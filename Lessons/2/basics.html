@@ -9,10 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../_shared/lib/prism.js"></script>
     <script src="../_shared/site.js"></script>
-    <script src="./Intro.js"></script>
+    <script src="./basics.js"></script>
 </head>
 
-<body>
+<body style="height: 100%;">
     <div class="row">
         <div class="col-2">
 
@@ -31,9 +31,24 @@
                         In this part of the course we'll go over printing messages.<br/>
                         As is commong practice we do this and begin with "Hello world". <br/>
     
-                        We do this by using <br/> <code class="language-lua">print("Hello World")</code> <br/>
-                        OR dependent on settings<br/>
-                        <code class="language-lua">io.write("Hello World")</code> <br/>
+                        We do this by using 
+                    </p>
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            print("Hello World")
+                        </code>
+                    </div>
+
+                    <p class="text">
+                        <br/>OR dependent on settings<br/>
+                    </p>
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            io.write("Hello World")
+                        </code>
+                    </div>
+
+                    <p class="text">
                         <br/>
                         for this course I would say just use the first of the two. <br/> 
                         <br/>
@@ -45,21 +60,42 @@
                 <div class="collapsible">
                     <h4 class="label">Variables</h4>
                     <p class="text">
-                        Variables are a big core concept to almost any coding language. It's a way to store some data and retrieve it later. <br/>
+                        Variables are a big core concept to almost any coding language. It's a way to store some data and retrieve it later. <br/> 
                         We'll not go into the details where that data is stored (heap, stack, etc.), since generally this doesn't matter when writing LUA. <br/>
 
                         You can declare a value. When doing so you tell the program you want it to keep track of some data for you. <br/> 
                         For example: <br/> 
-                        <code class="language-lua">local a</code> <br/>
+
+                    </p>
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            local a
+                        </code>
+                    </div>
+                    <p class="text">
                         Now we have a variable "a" which is now declared and local to this "<u>scope</u>". <br/>
                         <br/>
                         If we now want to store something in that variable we can "<u>assign</u>" a value to that variable.<br/>
                         For example: <br/>
-                        <code class="language-lua">a = 1</code><br/>
+                    </p>
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            a = 1
+                        </code>
+                    </div>
+                    <p class="text">
                         <br/>
                         You can also instantiate the variable when creating it. <br/>
                         For Example: <br/>
-                        <code class="language-lua">local b = 1</code><br/>
+                    </p>
+
+                        
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            local b = 2
+                        </code>
+                    </div>
+                    <p class="text">
                         <br/> 
                         You can pretty much store anything in a variable which can help write your code and make it easier to read. <br/>
                     </p>
@@ -70,13 +106,31 @@
                     <p class="text">
                         A string is a bit of text. This can again be stored in a variable. 
                         For instance: <br/>
-                        
-                        <code class="language-lua">
-                            local something \r\n
-                            something
-                        </code>
                     </p>
+
+                    
+                    <div class="static-render-div">
+                        <code class="language-lua static-render">
+                            local a = "something" \r\n
+                            local b = "else" \r\n
+                            local c = a .. " " .. b -- takes a and b and combines them into c 
+                            \r\n
+                            print(c) \r\n
+
+                            -- Output: "something else"
+                        </code>
+                    </div>
+
+                    <div>
+                        <br/>
+                        <h5>Test 1</h5>
+                        <div id="test1" class="code-block"></div>
+                    </div>
+
+                    
+
                 </div>
+                
                 
                 
             </div> <!-- end mainlayout -->
@@ -84,3 +138,4 @@
     </div>
 </body>
 
+<footer style="height: 10%;"></footer>

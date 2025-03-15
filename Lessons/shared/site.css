@@ -9,11 +9,19 @@
     --button-hover: #587DCE;
     --text-color: #E9F2F4;
     --executiontime-color: #8e98b8;
+    --code-background: #272822;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--background);
 }
 
 body {
-    background-color: var(--background);
+    padding-left: 10%;
     color: #E9F2F4;
+    padding-right: 10%;
+    padding-bottom: 30px;
 } 
 
 .mainlayout {
@@ -53,6 +61,10 @@ h4 {
     margin-left: 1em;
     margin-right: 1em;
 }
+
+/* .collapsible > div {
+    margin-left: 1em;
+} */
 
 .collapsible > .label {
     cursor: pointer;
@@ -97,6 +109,26 @@ h4 {
 *:after {
     box-sizing: border-box;
 } */
+
+.static-render {
+    white-space: normal;
+    cursor:default;
+}
+
+.static-render-div {
+    border-radius: 8px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.5em;
+    white-space: normal;
+    background-color: var(--code-background);
+}
+
+.assignment {
+    font-weight: bold;
+}
+
+
 
 label,
 textarea,
@@ -155,7 +187,7 @@ code {
 pre,
 code,
 .editor textarea {
-    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
     font-size: 1em;
 }
 

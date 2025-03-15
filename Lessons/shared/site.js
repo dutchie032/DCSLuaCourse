@@ -42,7 +42,7 @@ function inputHandler(event) {
 
 function loadCodeblocks() {
 
-    const div_list = document.querySelectorAll(".code_block")
+    const div_list = document.querySelectorAll(".code-block")
     const div_array = [...div_list]
 
     function addCodeBlockElements(element) {
@@ -100,6 +100,7 @@ function configureCollapsibles() {
     const div_array = [...div_list]
 
     div_array.forEach((element) => {
+        
         const label = element.querySelector(".label")
 
         if (element.classList.contains("collapsed")){
@@ -121,6 +122,9 @@ function configureCollapsibles() {
 }
 
 function addSiteHeader(){
+
+    return
+
     fetch("../_shared/siteheader.html")
     .then(res => res.text())
     .then((text) => {
@@ -143,6 +147,16 @@ function loadTooltips() {
     })
 
 }
+
+Prism.hooks.add("complete", (context) => {
+
+    const element = context.element
+    if(element.classList.contains("static-render")){
+        const html = context.element.innerHTML.replaceAll("\\r\\n", "<br>")
+        element.innerHTML = html
+    }
+})
+
 
 addEventListener("DOMContentLoaded", (event) => {
 
@@ -200,7 +214,7 @@ function testScript(button) {
         return
     }
 
-    const parrent = button.closest(".code_block")
+    const parrent = button.closest(".code-block")
     const textArea = parrent.querySelector("textarea")
 
     disableButton(button)
@@ -278,7 +292,7 @@ function testScript(button) {
 
 function resetCode(element) {
 
-    const parrent = element.closest(".code_block")
+    const parrent = element.closest(".code-block")
     const textArea = parrent.querySelector("textarea")
     textArea.value = testCases[parrent.id].code
 
