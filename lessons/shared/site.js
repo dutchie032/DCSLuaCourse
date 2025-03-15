@@ -122,15 +122,12 @@ function configureCollapsibles() {
 }
 
 function addSiteHeader(){
-
-    return
-
-    fetch("../_shared/siteheader.html")
+    fetch("../_shared/sitemenu.html")
     .then(res => res.text())
     .then((text) => {
-        const element = document.querySelector("#siteheader")
+        const element = document.querySelector("#sitemenu")
         const parser = new DOMParser()
-        const doc = parser.parseFromString(data, 'text/html')
+        const doc = parser.parseFromString(text, 'text/html')
         element.innerHTML = doc
     })
 }

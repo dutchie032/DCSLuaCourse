@@ -8,6 +8,7 @@
     --button: #395EA2;
     --button-hover: #587DCE;
     --text-color: #E9F2F4;
+    --text-color-hover: #9db3b8;
     --executiontime-color: #8e98b8;
     --code-background: #272822;
 }
@@ -18,11 +19,30 @@ html, body {
 }
 
 body {
+    margin-top: 2%;
     padding-left: 10%;
     color: #E9F2F4;
     padding-right: 10%;
     padding-bottom: 30px;
 } 
+
+.main-image {
+    width: 100%;
+}
+
+.menu-item {
+
+}
+
+.menu-item > a {
+    font-size: 1.2em;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu-item > a:hover{
+    color: var(--text-color-hover);
+}
 
 .mainlayout {
     width: 80%;
