@@ -122,7 +122,7 @@ function configureCollapsibles() {
 }
 
 function addSiteHeader(){
-    fetch("../_shared/sitemenu.html")
+    fetch("../shared/sitemenu.html")
     .then(res => res.text())
     .then((text) => {
         const element = document.querySelector("#sitemenu")
