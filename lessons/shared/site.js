@@ -126,9 +126,7 @@ function addSiteHeader(){
     .then(res => res.text())
     .then((text) => {
         const element = document.querySelector("#sitemenu")
-        const parser = new DOMParser()
-        const doc = parser.parseFromString(text, 'text/html')
-        element.innerHTML = doc
+        element.innerHTML = text
     })
 }
 
