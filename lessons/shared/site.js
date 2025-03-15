@@ -247,7 +247,7 @@ function testScript(button) {
         "visibility": "public"
     }
 
-    fetch("http://136.144.146.239:8080/https://onecompiler.com/api/code/exec", {
+    fetch("https://cors.timrorije.com/https://onecompiler.com/api/code/exec", {
         method: "POST",
         body: JSON.stringify(json),
         headers: {
